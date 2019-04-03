@@ -27,7 +27,7 @@ const game = ()=> {
 
 
         //Computer Options
-        const computerOptions = ['rock', 'paper', 'scissors']
+        const computerOptions = ['Rock', 'Paper', 'Scissors']
 
         options.forEach(option => {
             option.addEventListener('click', function() {
@@ -40,7 +40,7 @@ const game = ()=> {
                     //Update Images
                     playerHand.src = `./assets/${this.textContent}.png`
                     computerHand.src = `./assets/${computerChoice}.png`
-                }, 2000)
+                }, 1300)
 
                 playerHand.style.animation = "shakePlayer 2s ease"
                 computerHand.style.animation = "shakeComputer 2s ease"
@@ -64,8 +64,8 @@ const game = ()=> {
         }
 
         //Check for Rock
-        if (playerChoice === 'rock') {
-            if (computerChoice === 'scissors') {
+        if (playerChoice === 'Rock') {
+            if (computerChoice === 'Scissors') {
                 winner.textContent = 'Player Wins'
 
                 pScore++
@@ -81,8 +81,8 @@ const game = ()=> {
         }
         
         // Check for Paper
-        if (playerChoice === 'paper') {
-            if (computerChoice === 'scissors') {
+        if (playerChoice === 'Paper') {
+            if (computerChoice === 'Scissors') {
                 winner.textContent = 'Computer Wins'
 
                 cScore++
@@ -98,8 +98,8 @@ const game = ()=> {
         }
 
         // Check for Scissors
-        if (playerChoice === 'scissors') {
-            if (computerChoice === 'rock') {
+        if (playerChoice === 'Scissors') {
+            if (computerChoice === 'Rock') {
                 winner.textContent = 'Computer Wins'
 
                 cScore++
